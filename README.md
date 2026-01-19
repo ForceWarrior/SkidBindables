@@ -143,4 +143,5 @@ MySignal:Destroy()
 - **Bindable comparison:** Multiple `BindableEvent` listeners execute in an **unpredictable order**, and tables passed through bindables are **copied** (table identity changes) and **lose metatable information**.
 - **FireDeferred defaults:** `FireDeferred()` defaults to a batch size of `2000` in this module, and it yields using `task.wait()`. `task.wait()` resumes the thread on the next **Heartbeat** step (and with no duration it resumes on the next step).
 - **Sharing signals:** To use signals across multiple scripts, create a shared ModuleScript (for example `Events`) that stores your signal instances and `require()` it wherever needed.
+- **SkidTypes:** please parent the `SkidTypes` module under `SkidBindables` or change the path to it in `SkidBindables`.
 
